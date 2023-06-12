@@ -79,15 +79,11 @@ async def everyone(client, message):
                             f"-› Berhasil memotong **{i} manusia.**\n-› Bot dan akun yang dihapus ditolak."
                         )
                     chatQueue.remove(message.chat.id)
-        else:
-            await message.reply(
-                "-› Maaf, **hanya admin** yang dapat menjalankan perintah ini."
-            )
     except FloodWait as e:
         await asyncio.sleep(e.value)
 
 
-@bots.on_message(filters.command(["batal", "cancel"]) & filters.me)
+@bots.on_message(filters.command(["batal", "cancel"], cmd) & filters.me)
 async def stop(client, message):
     global stopProcess
     try:
