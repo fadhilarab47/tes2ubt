@@ -18,35 +18,33 @@ async def everyone(client, message):
         except:
             pass
         if len(chatQueue) > 500:
-            await message.reply(
+            return await message.reply(
                 "-› Saya sudah mengerjakan jumlah maksimum 500 obrolan saat ini. Coba sebentar lagi."
             )
+        if message.chat.id in chatQueue:
+            await message.reply(f"-› Sudah ada proses yang sedang berlangsung dalam obrolan ini. Silakan ketik `{cmd}batal` untuk memulai yang baru."
+            )
         else:
-            if message.chat.id in chatQueue:
-                await message.reply(
-                    "-› Sudah ada proses yang sedang berlangsung dalam obrolan ini. Silakan / stop untuk memulai yang baru."
-                )
+            chatQueue.append(message.chat.id)
+            if message.reply_to_message:
+                inputText = message.reply_to_message.text
             else:
-                chatQueue.append(message.chat.id)
-                if message.reply_to_message:
-                    inputText = message.reply_to_message.text
-                else:
-                    inputText = message.text.split(None, 1)[1]
-                    membersList = []
-                    async for member in client.get_chat_members(message.chat.id):
-                        if member.user.is_bot == True:
-                            pass
-                        elif member.user.is_deleted == True:
-                            pass
-                        else:
-                            membersList.append(member.user)
-                    i = 0
-                    lenMembersList = len(membersList)
-                    if stopProcess:
-                        stopProcess = False
-                    while len(membersList) > 0 and not stopProcess:
-                        j = 0
-                        text1 = f"{inputText}\n\n"
+                inputText = message.text.split(None, 1)[1]
+                membersList = []
+                async for member in client.get_chat_members(message.chat.id):
+                    if member.user.is_bot == True:
+                      pass
+                    elif member.user.is_deleted == True:
+                      pass
+                    else:
+                        membersList.append(member.user)
+                        i = 0
+                        lenMembersList = len(membersList)
+                        if stopProcess:
+                            stopProcess = False
+                        while len(membersList) > 0 and not stopProcess:
+                            j = 0
+                            text1 = f"{inputText}\n\n"
                         try:
                             while j < 10:
                                 user = membersList.pop(0)
