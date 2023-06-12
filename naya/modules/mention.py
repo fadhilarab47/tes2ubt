@@ -14,16 +14,17 @@ async def everyone(client, message):
     global stopProcess
     try:
         try:
-            sender = await client.get_chat_member(message.chat.id, message.from_user.id)
+            await client.get_chat_member(message.chat.id, message.from_user.id)
         except:
             pass
         if len(chatQueue) > 500:
-                await message.reply(
-                    "-› Saya sudah mengerjakan jumlah maksimum 500 obrolan saat ini. Coba sebentar lagi."
-                )
+            await message.reply(
+                "-› Saya sudah mengerjakan jumlah maksimum 500 obrolan saat ini. Coba sebentar lagi."
+            )
         else:
             if message.chat.id in chatQueue:
-                await message.reply("-› Sudah ada proses yang sedang berlangsung dalam obrolan ini. Silakan / stop untuk memulai yang baru."
+                await message.reply(
+                    "-› Sudah ada proses yang sedang berlangsung dalam obrolan ini. Silakan / stop untuk memulai yang baru."
                 )
             else:
                 chatQueue.append(message.chat.id)
@@ -78,7 +79,6 @@ async def everyone(client, message):
                     chatQueue.remove(message.chat.id)
     except FloodWait as e:
         await asyncio.sleep(e.value)
-            
 
 
 @bots.on_message(filters.command(["batal", "cancel"], cmd) & filters.me)
@@ -86,11 +86,12 @@ async def stop(client, message):
     global stopProcess
     try:
         try:
-            sender = await client.get_chat_member(message.chat.id, message.from_user.id)
+            await client.get_chat_member(message.chat.id, message.from_user.id)
         except:
             pass
         if not message.chat.id in chatQueue:
-            await message.reply("-› Tidak ada proses yang berkelanjutan untuk dihentikan."
+            await message.reply(
+                "-› Tidak ada proses yang berkelanjutan untuk dihentikan."
             )
         else:
             stopProcess = True
