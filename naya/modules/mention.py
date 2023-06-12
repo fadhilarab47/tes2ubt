@@ -22,7 +22,8 @@ async def everyone(client, message):
                 "-› Saya sudah mengerjakan jumlah maksimum 500 obrolan saat ini. Coba sebentar lagi."
             )
         if message.chat.id in chatQueue:
-            await message.reply(f"-› Sudah ada proses yang sedang berlangsung dalam obrolan ini. Silakan ketik `{cmd}batal` untuk memulai yang baru."
+            await message.reply(
+                f"-› Sudah ada proses yang sedang berlangsung dalam obrolan ini. Silakan ketik `{cmd}batal` untuk memulai yang baru."
             )
         else:
             chatQueue.append(message.chat.id)
@@ -33,9 +34,9 @@ async def everyone(client, message):
                 membersList = []
                 async for member in client.get_chat_members(message.chat.id):
                     if member.user.is_bot == True:
-                      pass
+                        pass
                     elif member.user.is_deleted == True:
-                      pass
+                        pass
                     else:
                         membersList.append(member.user)
                         i = 0
