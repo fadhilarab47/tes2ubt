@@ -15,25 +15,22 @@ async def everyone(client, message):
     try:
         try:
             sender = await client.get_chat_member(message.chat.id, message.from_user.id)
-            has_permissions = sender.privileges
         except:
-            has_permissions = message.sender_chat
-        if has_permissions:
-            if len(chatQueue) > 500:
+            pass
+        if len(chatQueue) > 500:
                 await message.reply(
                     "-› Saya sudah mengerjakan jumlah maksimum 500 obrolan saat ini. Coba sebentar lagi."
                 )
+        else:
+            if message.chat.id in chatQueue:
+                await message.reply("-› Sudah ada proses yang sedang berlangsung dalam obrolan ini. Silakan / stop untuk memulai yang baru."
+                )
             else:
-                if message.chat.id in chatQueue:
-                    await message.reply(
-                        "-› Sudah ada proses yang sedang berlangsung dalam obrolan ini. Silakan / stop untuk memulai yang baru."
-                    )
+                chatQueue.append(message.chat.id)
+                if message.reply_to_message:
+                    inputText = message.reply_to_message.text
                 else:
-                    chatQueue.append(message.chat.id)
-                    if message.reply_to_message:
-                        inputText = message.reply_to_message.text
-                    else:
-                        inputText = message.text.split(None, 1)[1]
+                    inputText = message.text.split(None, 1)[1]
                     membersList = []
                     async for member in client.get_chat_members(message.chat.id):
                         if member.user.is_bot == True:
@@ -81,6 +78,7 @@ async def everyone(client, message):
                     chatQueue.remove(message.chat.id)
     except FloodWait as e:
         await asyncio.sleep(e.value)
+            
 
 
 @bots.on_message(filters.command(["batal", "cancel"], cmd) & filters.me)
@@ -89,17 +87,14 @@ async def stop(client, message):
     try:
         try:
             sender = await client.get_chat_member(message.chat.id, message.from_user.id)
-            has_permissions = sender.privileges
         except:
-            has_permissions = message.sender_chat
-        if has_permissions:
-            if not message.chat.id in chatQueue:
-                await message.reply(
-                    "-› Tidak ada proses yang berkelanjutan untuk dihentikan."
-                )
-            else:
-                stopProcess = True
-                return await message.reply("-› Stopped.")
+            pass
+        if not message.chat.id in chatQueue:
+            await message.reply("-› Tidak ada proses yang berkelanjutan untuk dihentikan."
+            )
+        else:
+            stopProcess = True
+            return await message.reply("-› Stopped.")
     except FloodWait as e:
         await asyncio.sleep(e.value)
 
