@@ -11,7 +11,7 @@ stopProcess = False
 async def mentionall(client: Client, message: Message):
     await message.delete()
     chat_id = message.chat.id
-    direp = message.reply_to_message.text
+    direp = message.reply_to_message
     args = get_arg(message)
     if not direp and not args:
         return await message.edit("**Berikan saya pesan atau balas ke pesan!**")
