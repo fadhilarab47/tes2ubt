@@ -11,7 +11,7 @@ stopProcess = False
 async def mentionall(client: Client, message: Message):
     await message.delete()
     chat_id = message.chat.id
-    direp = message.reply_to_message
+    direp = message.reply_to_message.text
     args = get_arg(message)
     if not direp and not args:
         return await message.edit("**Berikan saya pesan atau balas ke pesan!**")
@@ -22,14 +22,16 @@ async def mentionall(client: Client, message: Message):
     async for usr in client.get_chat_members(chat_id):
         if not chat_id in spam_chats:
             break
+        elif usr.user.is_bot == True:
+            pass
+        elif usr.user.is_deleted == True:
+            pass
         usrnum += 1
         usrtxt += f"👤 [{usr.user.first_name}](tg://user?id={usr.user.id}), "
         if usrnum == 5:
-            if args:
-                txt = f"{args}\n\n{usrtxt}"
+            if direp:
+                txt = f"{direp}\n\n{usrtxt}"
                 await client.send_message(chat_id, txt)
-            elif direp:
-                await direp.reply(usrtxt)
             await sleep(2)
             usrnum = 0
             usrtxt = ""
