@@ -57,20 +57,12 @@ async def everyone(client, message):
                                 pass
                             await asyncio.sleep(3)
                             i += 10
-                        except IndexError:
-                            try:
-                                await client.send_message(message.chat.id, text1)
-                            except Exception:
-                                pass
+                    except IndexError:
+                        try:
+                            await client.send_message(message.chat.id, text1)
+                        except Exception:
+                            pass
                             i = i + j
-                    if i == lenMembersList:
-                        await message.reply(
-                            f"-› Berhasil memotong **jumlah total {i} manusia**.\n-› Bot dan akun yang dihapus ditolak."
-                        )
-                    else:
-                        await message.reply(
-                            f"-› Berhasil memotong **{i} manusia.**\n-› Bot dan akun yang dihapus ditolak."
-                        )
                     chatQueue.remove(message.chat.id)
 
 
