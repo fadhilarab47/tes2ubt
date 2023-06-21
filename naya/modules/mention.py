@@ -27,10 +27,10 @@ async def mentionall(client: Client, message: Message):
         elif usr.user.is_deleted == True:
             pass
         usrnum += 1
-        usrtxt += f"👤 [{usr.user.first_name}](tg://user?id={usr.user.id}), "
+        usrtxt += f"👤 [{usr.user.first_name}](tg://user?id={usr.user.id})\n"
         if usrnum == 5:
             if direp:
-                txt = f"{direp}\n\n{usrtxt}"
+                txt = f"**{direp}**\n\n{usrtxt}"
                 await client.send_message(chat_id, txt)
             await sleep(2)
             usrnum = 0
