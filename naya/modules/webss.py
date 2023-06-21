@@ -5,6 +5,7 @@ from io import BytesIO
 from pyrogram import filters
 
 from . import *
+from kynaylibs.nan.utils.http import *
 
 __MODULE__ = "webshot"
 __HELP__ = f"""
