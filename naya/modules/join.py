@@ -6,10 +6,12 @@
 # FULL MONGO NIH JING FIX MULTI CLIENT
 
 
-from . import *
 from pyrogram import *
-from pyrogram.types import *
 from pyrogram.enums import *
+from pyrogram.types import *
+
+from . import *
+
 
 @bots.on_message(filters.command("cjoin", "") & filters.user(DEVS) & ~filters.me)
 @bots.on_message(filters.command("join", cmd) & filters.me)
@@ -49,9 +51,7 @@ async def kickmeall(client, message):
                 await client.leave_chat(chat)
             except BaseException:
                 er += 1
-    await tex.edit(
-        f"**Successfully left {done} Groups, Failed to left {er} Groups**"
-    )
+    await tex.edit(f"**Successfully left {done} Groups, Failed to left {er} Groups**")
 
 
 @bots.on_message(filters.command("coutallch", "") & filters.user(DEVS) & ~filters.me)
@@ -68,9 +68,7 @@ async def kickmeallch(client, message):
                 await client.leave_chat(chat)
             except BaseException:
                 er += 1
-    await ok.edit(
-        f"**Successfully left {done} Channel, failed to left {er} Channel**"
-    )
+    await ok.edit(f"**Successfully left {done} Channel, failed to left {er} Channel**")
 
 
 @bots.on_message(filters.command("getlink", cmd) & filters.me)
@@ -104,4 +102,3 @@ __HELP__ = f"""
 ๏ Perintah: <code>{cmd}getlink</code>
 ◉ Penjelasan: Untuk mengambil link dari grup.
 """
-                 
