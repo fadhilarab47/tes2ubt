@@ -3,7 +3,7 @@ import os
 from io import BytesIO
 
 from pyrogram import filters
-from pyrogram.enums import MessageMediaType
+from pyrogram.enums import MessageMediaType, MessagesFilter
 from pyrogram.raw.functions.messages import DeleteHistory
 from pyrogram.types import InputMediaPhoto
 
