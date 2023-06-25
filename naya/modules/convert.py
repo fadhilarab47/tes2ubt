@@ -30,19 +30,17 @@ async def _(client, message):
     if message.reply_to_message:
         if len(message.command) < 2:
             if message.reply_to_message.photo:
-                type = "Foto"
                 get_photo = message.reply_to_message.photo.file_id
             if message.reply_to_message.sticker:
-                type = "Stiker"
+                pass
             if message.reply_to_message.animation:
-                type = "Animasi"
+                pass
             path = await client.download_media(message.reply_to_message)
             with open(path, "rb") as f:
                 content = f.read()
             os.remove(path)
             get_photo = BytesIO(content)
         elif message.command[1] in ["foto", "profil", "photo"]:
-            type = "Foto"
             chat = (
                 message.reply_to_message.from_user
                 or message.reply_to_message.sender_chat
@@ -55,7 +53,6 @@ async def _(client, message):
             return await Tm.edit(
                 "Balas ke foto dan saya akan merubah foto anda menjadi anime"
             )
-        type = "Foto"
         get = await client.get_chat(message.command[1])
         photo = get.photo.big_file_id
         get_photo = await client.download_media(photo)
@@ -85,7 +82,6 @@ async def _(client, message):
             reply_to_message_id=message.id,
         )
         return await client.invoke(DeleteHistory(peer=info, max_id=0, revoke=True))
-
 
 
 @bots.on_message(filters.me & filters.command("toaudio", cmd))
