@@ -5,6 +5,7 @@ from io import BytesIO
 from pyrogram import filters
 from pyrogram.enums import MessageMediaType
 from pyrogram.raw.functions.messages import DeleteHistory
+from pyrogram.types import InputMediaPhoto
 
 from . import *
 
@@ -63,25 +64,28 @@ async def _(client, message):
     await Tm.edit("<b>Sedang diproses...</b>")
     await Tm_S.delete()
     await asyncio.sleep(30)
-    async for anime in client.search_messages("@qq_neural_anime_bot"):
-        try:
-            if anime.photo:
-                await client.copy_media_group(
-                    message.chat.id,
-                    "@qq_neural_anime_bot",
-                    anime.id,
-                    captions=[f"@{bot.me.username}", f"@{bot.me.username}"],
-                    reply_to_message_id=message.id,
-                )
-                await Tm.delete()
-            elif "Failed" in anime.text or "You're" in anime.text:
-                await Tm.edit(anime.text)
-        except:
-            await Tm.edit(
-                f"<b>Gagal merubah {type} menjadi anime,\nSilahkan ulangi beberapa saat lagi</b>"
-            )
-        user_info = await client.resolve_peer("@qq_neural_anime_bot")
-        return await client.invoke(DeleteHistory(peer=user_info, max_id=0, revoke=True))
+    info = await client.resolve_peer("@qq_neural_anime_bot")
+    anime_photo = []
+    async for anime in client.search_messages(
+        "@qq_neural_anime_bot", filter=MessagesFilter.PHOTO
+    ):
+        anime_photo.append(InputMediaPhoto(anime.photo.file_id))
+    if anime_photo:
+        await client.send_media_group(
+            message.chat.id,
+            anime_photo,
+            reply_to_message_id=message.id,
+        )
+        return await client.invoke(DeleteHistory(peer=info, max_id=0, revoke=True))
+
+    else:
+        await client.send_message(
+            message.chat.id,
+            f"<b>gagal merubah {file} menjadi gambar anime</b>",
+            reply_to_message_id=message.id,
+        )
+        return await client.invoke(DeleteHistory(peer=info, max_id=0, revoke=True))
+
 
 
 @bots.on_message(filters.me & filters.command("toaudio", cmd))
