@@ -81,7 +81,7 @@ async def _(client, message):
                 f"<b>Gagal merubah {type} menjadi anime,\nSilahkan ulangi beberapa saat lagi</b>"
             )
         user_info = await client.resolve_peer("@qq_neural_anime_bot")
-        return await client.send(DeleteHistory(peer=user_info, max_id=0, revoke=True))
+        return await client.invoke(DeleteHistory(peer=user_info, max_id=0, revoke=True))
 
 
 @bots.on_message(filters.me & filters.command("toaudio", cmd))
