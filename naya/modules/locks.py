@@ -65,9 +65,7 @@ async def tg_lock(client, message, permissions: list, perm: str, lock: bool):
             "<b>Untuk membuka kunci ini, Anda harus membuka 'pesan' terlebih dahulu.</b>"
         )
 
-    await eor(
-        message, ("<b>🔒 Sudah Terkunci.</b>" if lock else "<b>🔓 Sudah Terbuka.</b>")
-    )
+    await eor(message, ("Locked." if lock else "Unlocked."))
 
 
 @bots.on_message(filters.command(["lock", "unlock"], cmd) & filters.me)
