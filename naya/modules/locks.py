@@ -83,7 +83,13 @@ async def locks_func(client, message):
     permissions = await current_chat_permissions(client, chat_id)
 
     if parameter in data:
-        await tg_lock(client, message, permissions, data[parameter], state == "lock")
+        await tg_lock(
+            client,
+            message,
+            permissions,
+            data[parameter],
+            bool(state == "lock"),
+        )
     elif parameter == "all" and state == "lock":
         await client.set_chat_permissions(chat_id, ChatPermissions())
         await eor(
