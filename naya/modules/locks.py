@@ -49,9 +49,9 @@ async def tg_lock(client, message, permissions: list, perm: str, lock: bool):
         if perm not in permissions:
             return await eor(message, "<b>🔒 Sudah Terkunci.</b>")
         permissions.remove(perm)
-    elif perm in permissions:
-        return await eor(message, "<b>🔓 Sudah Terbuka.</b>")
     else:
+        if perm in permissions:
+            return await eor(message, "<b>🔓 Sudah Terbuka.</b>")
         permissions.append(perm)
 
     permissions = {perm: True for perm in list(set(permissions))}
