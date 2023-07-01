@@ -1,13 +1,13 @@
 from pyrogram import Client, filters
-from pyrogram.errors.exceptions.bad_request_400 import (
-    ChatAdminRequired,
-    ChatNotModified,
-)
+from pyrogram.errors.exceptions.bad_request_400 import (ChatAdminRequired,
+                                                        ChatNotModified)
 from pyrogram.types import ChatPermissions, Message
+
 from . import *
 
-
-incorrect_parameters = f"Parameter salah, gunakan `help locks` untuk melihat contoh penggunaan"
+incorrect_parameters = (
+    f"Parameter salah, gunakan `help locks` untuk melihat contoh penggunaan"
+)
 data = {
     "msg": "can_send_messages",
     "stickers": "can_send_other_messages",
@@ -21,7 +21,6 @@ data = {
     "invite": "can_invite_users",
     "pin": "can_pin_messages",
 }
-
 
 
 async def current_chat_permissions(client: Client, chat_id):
@@ -68,9 +67,7 @@ async def tg_lock(
             message.chat.id, ChatPermissions(**permissions)
         )
     except ChatNotModified:
-        return await message.edit_text(
-            f"Gunakan lock, terlebih dahulu."
-        )
+        return await message.edit_text(f"Gunakan lock, terlebih dahulu.")
     except ChatAdminRequired:
         return await message.edit_text("`Anda harus menjadi admin disini.`")
     await message.edit_text(
@@ -80,6 +77,7 @@ async def tg_lock(
             else f"🔒 **Unlocked untuk non-admin!**\n  **Type:** `{parameter}`\n  **Chat:** {message.chat.title}"
         )
     )
+
 
 @bots.on_message(filters.command(["lock", "unlock"], cmd) & filters.me)
 async def locks_func(client: Client, message: Message):
