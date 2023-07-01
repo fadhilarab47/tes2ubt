@@ -71,14 +71,14 @@ async def tg_lock(client, message, permissions: list, perm: str, lock: bool):
 @bots.on_message(filters.command(["lock", "unlock"], cmd) & filters.me)
 async def locks_func(client, message):
     if len(message.command) != 2:
-        return await message.eor(message, incorrect_parameters)
+        return await eor(message, incorrect_parameters)
 
     chat_id = message.chat.id
     parameter = message.text.strip().split(None, 1)[1].lower()
     state = message.command[0].lower()
 
     if parameter not in data and parameter != "all":
-        return await message.eor(message, incorrect_parameters)
+        return await eor(message, incorrect_parameters)
 
     permissions = await current_chat_permissions(client, chat_id)
 
