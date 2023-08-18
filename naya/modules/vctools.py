@@ -40,7 +40,9 @@ async def get_group_call(
     chat_peer = await client.resolve_peer(message.chat.id)
     if isinstance(chat_peer, (InputPeerChannel, InputPeerChat)):
         if isinstance(chat_peer, InputPeerChannel):
-            full_chat = (await client.invoke(GetFullChannel(channel=chat_peer))).full_chat
+            full_chat = (
+                await client.invoke(GetFullChannel(channel=chat_peer))
+            ).full_chat
         elif isinstance(chat_peer, InputPeerChat):
             full_chat = (
                 await client.invoke(GetFullChat(chat_id=chat_peer.chat_id))

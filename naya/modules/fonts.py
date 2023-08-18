@@ -2,7 +2,6 @@
 # © @KynanSupport
 
 
-
 from pyrogram import *
 from pyrogram.types import *
 

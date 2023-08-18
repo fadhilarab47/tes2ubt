@@ -131,9 +131,7 @@ bot5 = (
 
 bots = Ubot(name="bots")
 
-botlist = [
-    bot for bot in [bot1, bot2, bot3, bot4, bot5] if bot
-]
+botlist = [bot for bot in [bot1, bot2, bot3, bot4, bot5] if bot]
 
 for bot in botlist:
     bots._bots.append(bot)

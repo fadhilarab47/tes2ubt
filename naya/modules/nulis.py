@@ -2,7 +2,6 @@
 # © @KynanSupport
 
 
-
 import os
 
 from PIL import *
