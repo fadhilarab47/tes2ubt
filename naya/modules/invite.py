@@ -1,6 +1,5 @@
-"""
-CREDITS TOMAY
-"""
+# @Rizzvbss | @Kenapanan | @SharingUserbot | Zaid-Userbot
+# © @KynanSupport
 
 import asyncio
 

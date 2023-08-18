@@ -1,3 +1,7 @@
+# @Rizzvbss | @Kenapanan | @SharingUserbot | Zaid-Userbot | WBB
+# © @KynanSupport
+
+
 from io import BytesIO
 
 from kynaylibs.nan.utils import *

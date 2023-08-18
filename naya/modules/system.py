@@ -1,3 +1,7 @@
+# @Rizzvbss | @Kenapanan | @SharingUserbot | Zaid-Userbot | WBB
+# © @KynanSupport
+
+
 import asyncio
 import math
 import os

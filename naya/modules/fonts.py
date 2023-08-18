@@ -1,9 +1,6 @@
-# Copas Teriak Copas MONYET
-# Gay Teriak Gay Anjeng
-# @Rizzvbss | @Kenapanan | AyiinXD
-# Kok Bacot
+# @Rizzvbss | @Kenapanan | @SharingUserbot | Zaid-Userbot
 # © @KynanSupport
-# FULL MONGO NIH JING FIX MULTI CLIENT
+
 
 
 from pyrogram import *

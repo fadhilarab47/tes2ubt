@@ -1,3 +1,7 @@
+# @Rizzvbss | @Kenapanan | @SharingUserbot | Zaid-Userbot | WBB
+# © @KynanSupport
+
+
 from asyncio import gather
 from os import remove
 

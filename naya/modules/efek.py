@@ -1,6 +1,6 @@
-"""
-CREDIST TOMAY GANTENG
-"""
+# @Rizzvbss | @Kenapanan | @SharingUserbot | Zaid-Userbot
+# © @KynanSupport
+
 
 import asyncio
 import os

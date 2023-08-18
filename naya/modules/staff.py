@@ -1,6 +1,6 @@
-"""
-TOMAY
-"""
+# @Rizzvbss | @Kenapanan | @SharingUserbot | Zaid-Userbot | WBB
+# © @KynanSupport
+
 
 from pyrogram import filters
 from pyrogram.types import Message

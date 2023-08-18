@@ -1,3 +1,7 @@
+# @Rizzvbss | @Kenapanan | @SharingUserbot | Zaid-Userbot | WBB
+# © @KynanSupport
+
+
 import os
 
 from pyrogram import filters

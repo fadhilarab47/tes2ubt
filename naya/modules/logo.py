@@ -1,3 +1,7 @@
+# @Rizzvbss | @Kenapanan | @SharingUserbot | Zaid-Userbot
+# © @KynanSupport
+
+
 import glob
 import os
 import random

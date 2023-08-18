@@ -1,3 +1,7 @@
+# @Rizzvbss | @Kenapanan | @SharingUserbot | Zaid-Userbot | WBB
+# © @KynanSupport
+
+
 import os
 
 from pyrogram import filters
@@ -13,8 +17,6 @@ __HELP__ = f"""
 """
 
 telegraph = Telegraph()
-r = telegraph.create_account(short_name="Naya-Pyro")
-auth_url = r["auth_url"]
 
 
 @bots.on_message(filters.me & filters.command("tg", cmd))

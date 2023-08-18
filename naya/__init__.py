@@ -17,8 +17,7 @@ from pytgcalls import GroupCallFactory
 from telegraph import Telegraph, exceptions, upload_file
 
 from .config import (API_HASH, API_ID, BOT_TOKEN, CMD_HNDLR, SESSION1,
-                     SESSION2, SESSION3, SESSION4, SESSION5, SESSION6,
-                     SESSION7, SESSION8, SESSION9, SESSION10)
+                     SESSION2, SESSION3, SESSION4, SESSION5)
 
 StartTime = time.time()
 cmd = CMD_HNDLR
@@ -128,64 +127,12 @@ bot5 = (
     if SESSION5
     else None
 )
-bot6 = (
-    Ubot(
-        name="bot6",
-        api_id=API_ID,
-        api_hash=API_HASH,
-        session_string=SESSION6,
-    )
-    if SESSION6
-    else None
-)
 
-bot7 = (
-    Ubot(
-        name="bot7",
-        api_id=API_ID,
-        api_hash=API_HASH,
-        session_string=SESSION7,
-    )
-    if SESSION7
-    else None
-)
 
-bot8 = (
-    Ubot(
-        name="bot8",
-        api_id=API_ID,
-        api_hash=API_HASH,
-        session_string=SESSION8,
-    )
-    if SESSION8
-    else None
-)
-
-bot9 = (
-    Ubot(
-        name="bot9",
-        api_id=API_ID,
-        api_hash=API_HASH,
-        session_string=SESSION9,
-    )
-    if SESSION9
-    else None
-)
-
-bot10 = (
-    Ubot(
-        name="bot10",
-        api_id=API_ID,
-        api_hash=API_HASH,
-        session_string=SESSION10,
-    )
-    if SESSION10
-    else None
-)
 bots = Ubot(name="bots")
 
 botlist = [
-    bot for bot in [bot1, bot2, bot3, bot4, bot5, bot6, bot7, bot8, bot9, bot10] if bot
+    bot for bot in [bot1, bot2, bot3, bot4, bot5] if bot
 ]
 
 for bot in botlist:

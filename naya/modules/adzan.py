@@ -1,3 +1,7 @@
+# @Rizzvbss | @Kenapanan | @SharingUserbot | Zaid-Userbot
+# © @KynanSupport
+
+
 import json
 
 import requests

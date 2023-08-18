@@ -4,12 +4,8 @@
 THANKS TO TOMI
 👤 Telegram: @T0M1_X
 """
-# Copas Teriak Copas MONYET
-# Gay Teriak Gay Anjeng
-# @Rizzvbss | @Kenapanan
-# Kok Bacot
-# © @KynanSupport
-# FULL MONGO NIH JING FIX MULTI CLIENT
+# @Rizzvbss | @Kenapanan | @SharingUserbot | Zaid-Userbot
+# @KynanSupport
 
 import os
 from asyncio import get_event_loop

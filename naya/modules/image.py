@@ -1,10 +1,6 @@
-# Copas Teriak Copas MONYET
-# Gay Teriak Gay Anjeng
-# @Rizzvbss | @Kenapanan
-# Kok Bacot
-# © @KynanSupport
-# FULL MONGO NIH JING FIX MULTI CLIENT
 
+# @Rizzvbss | @Kenapanan
+# @KynanSupport
 # COPYRIGHT https://github.com/TeamKillerX/DarkWeb
 # CREATE CODING BY https://t.me/xtsea
 

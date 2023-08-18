@@ -1,9 +1,7 @@
-# Copas Teriak Copas MONYET
-# Gay Teriak Gay Anjeng
-# @Rizzvbss | @Kenapanan
-# Kok Bacot
-# © @KynanSupport | Nexa_UB
-# FULL MONGO NIH JING FIX MULTI CLIENT
+# @Rizzvbss | @Kenapanan | @SharingUserbot | Zaid-Userbot
+# © @KynanSupport
+
+
 from . import *
 
 PM_GUARD_WARNS_DB = {}

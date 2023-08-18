@@ -1,3 +1,7 @@
+# @Rizzvbss | @Kenapanan | @SharingUserbot | Zaid-Userbot
+# © @KynanSupport
+
+
 from pyrogram import Client, filters
 from pyrogram.errors.exceptions.bad_request_400 import (ChatAdminRequired,
                                                         ChatNotModified)
