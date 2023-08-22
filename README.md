@@ -21,9 +21,21 @@ $ pip3 install -r req*
 $ nano .env
 ## KALAU SUDAH SAVE DENGAN MENEKAN CTRL + S LALU CTRL + X ##
 $ screen -S naya
-$ bash start
+$ bash start.sh
 ## DETACH SCREEN CTRL + A LALU CTRL + D ###
 ```
+
+## Deploy Via Docker
+```
+$ apt install docker-ce docker-ce-cli containerd.io
+$ systemctl start docker && systemctl enable docker
+$ git clone https://github.com/naya1503/Naya-Pyro && cd Naya-Pyro
+## ISI VARS API_ID, API_HASH, BOT_TOKEN, SESSION1, DAN OPENAI_API JIKA PERLU DENGAN CARA : ##
+$ nano .env
+## KALAU SUDAH SAVE DENGAN MENEKAN CTRL + S LALU CTRL + X ##
+$ docker build . -t naya
+$ docker run --name naya --env-file .env naya
+## CLOSE VPS ###
 
 ## Thanks to 💖
 
@@ -34,6 +46,8 @@ $ bash start
 - [Team Tiger](https://github.com/TeamTiger)
 
 - [Tomi Setiawan](https://github.com/XtomiX)
+
+- [Geez-Pyro](https://github.com/hitoizzy)
 
 ## Credit 💖
 
@@ -46,3 +60,6 @@ $ bash start
 - Tomi Setiawan
 
 - Xtsea
+
+
+- Geez-Pyro
