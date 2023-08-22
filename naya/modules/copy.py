@@ -7,11 +7,11 @@ import os
 from gc import get_objects
 from time import time
 
+from kynaylibs.nan.utils import get_arg
 from pyrogram import *
 from pyrogram.types import *
 
 from naya import app, bots, cmd
-from kynaylibs.nan.utils import get_arg, eor
 
 __MODULE__ = "nyolong"
 __HELP__ = f"""
