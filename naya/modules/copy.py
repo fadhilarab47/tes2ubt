@@ -10,7 +10,7 @@ from time import time
 from pyrogram import *
 from pyrogram.types import *
 
-from . import *
+from naya import cmd, bots, app
 
 __MODULE__ = "nyolong"
 __HELP__ = f"""
