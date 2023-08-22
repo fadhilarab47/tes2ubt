@@ -64,8 +64,8 @@ async def _(client, message):
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
     _ping = f"""
-<b>❏ Pong !!</b> `{delta_ping} ms`
-<b>╰ Aktif:</b> `{uptime}`
+<b>Pong !!</b> `{delta_ping} ms`
+<b>Uptime:</b> `{uptime}`
 """
     await message.reply(_ping)
 
