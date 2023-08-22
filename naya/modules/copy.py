@@ -7,7 +7,7 @@ import os
 from gc import get_objects
 from time import time
 
-from kynaylibs.nan.utils import get_arg
+from kynaylibs.nan.utils import get_arg, progress, eor
 from pyrogram import *
 from pyrogram.types import *
 
