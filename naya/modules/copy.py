@@ -11,6 +11,7 @@ from pyrogram import *
 from pyrogram.types import *
 
 from naya import app, bots, cmd
+from kynaylibs.nan.utils import get_arg, eor
 
 __MODULE__ = "nyolong"
 __HELP__ = f"""
