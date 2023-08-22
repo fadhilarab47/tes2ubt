@@ -6,10 +6,10 @@ import asyncio
 import os
 from io import BytesIO
 
-from pyrogram import filters
-from pyrogram.enums import MessageMediaType, MessagesFilter
-from pyrogram.raw.functions.messages import DeleteHistory
-from pyrogram.types import InputMediaPhoto
+from kymang import filters
+from kymang.enums import MessageMediaType, MessagesFilter
+from kymang.raw.functions.messages import DeleteHistory
+from kymang.types import InputMediaPhoto
 
 from . import *
 

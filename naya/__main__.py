@@ -7,8 +7,8 @@ from kynaylibs.nan.utils import *
 from kynaylibs.nan.utils.db import *
 from kynaylibs.version import __version__ as nay
 from kynaylibs.version import kynay_version as nan
-from pyrogram import __version__ as pyro
-from pyrogram import idle
+from kymang import __version__ as pyro
+from kymang import idle
 from uvloop import install
 
 from naya import *
@@ -19,7 +19,7 @@ MSG_ON = """
 ╼┅━━━━━━━━━━╍━━━━━━━━━━┅╾
 ◉ **Versi** : `{}`
 ◉ **Phython** : `{}`
-◉ **Pyrogram** : `{}`
+◉ **kymang** : `{}`
 ◉ **Kynaylibs** : `{}`
 **Ketik** `{}alive` **untuk Mengecheck Bot**
 ╼┅━━━━━━━━━━╍━━━━━━━━━━┅╾

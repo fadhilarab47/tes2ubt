@@ -6,8 +6,8 @@ from io import *
 
 import openai
 from kynaylibs.nan.utils.http import *
-from pyrogram import filters
-from pyrogram.types import *
+from kymang import filters
+from kymang.types import *
 
 from naya import *
 from naya.config import *

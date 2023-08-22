@@ -4,9 +4,9 @@
 
 import os
 
-from pyrogram import *
-from pyrogram import filters
-from pyrogram.types import *
+from kymang import *
+from kymang import filters
+from kymang.types import *
 
 from . import *
 

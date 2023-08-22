@@ -6,9 +6,9 @@ import time
 from datetime import datetime
 from random import choice
 
-from pyrogram import *
-from pyrogram.raw.functions import Ping
-from pyrogram.types import *
+from kymang import *
+from kymang.raw.functions import Ping
+from kymang.types import *
 
 from . import *
 

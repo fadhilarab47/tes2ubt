@@ -5,8 +5,8 @@ import random
 from asyncio import gather
 from random import choice
 
-from pyrogram import enums, filters
-from pyrogram.enums import MessagesFilter
+from kymang import enums, filters
+from kymang.enums import MessagesFilter
 
 from . import *
 

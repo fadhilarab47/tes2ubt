@@ -3,7 +3,7 @@
 
 from asyncio import sleep
 
-from pyrogram import filters
+from kymang import filters
 
 from . import *
 

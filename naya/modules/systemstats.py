@@ -7,7 +7,7 @@ import sys
 from datetime import datetime
 
 import psutil
-from pyrogram import __version__
+from kymang import __version__
 
 from . import *
 
@@ -106,6 +106,6 @@ async def _(_, message):
     help_string += f"{str(bw)}\n"
     help_string += "**Informasi Mesin**\n"
     help_string += f"`Python {sys.version}`\n"
-    help_string += f"`Pyrogram {__version__}`\n"
+    help_string += f"`kymang {__version__}`\n"
     help_string += f"**Powered by Naya-Pyro**\n"
     await eor(message, help_string)

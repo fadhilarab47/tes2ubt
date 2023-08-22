@@ -4,8 +4,8 @@
 
 import asyncio
 
-from pyrogram import filters
-from pyrogram.raw.functions.messages import DeleteHistory
+from kymang import filters
+from kymang.raw.functions.messages import DeleteHistory
 
 from . import *
 

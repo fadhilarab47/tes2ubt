@@ -12,8 +12,8 @@ from asyncio import get_event_loop
 from functools import partial
 
 import wget
-from pyrogram import *
-from pyrogram.types import *
+from kymang import *
+from kymang.types import *
 from youtubesearchpython import SearchVideos
 from yt_dlp import YoutubeDL
 

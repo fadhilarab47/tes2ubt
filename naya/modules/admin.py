@@ -4,8 +4,8 @@
 
 import html
 
-from pyrogram import Client, enums
-from pyrogram.types import Message
+from kymang import Client, enums
+from kymang.types import Message
 
 from . import *
 

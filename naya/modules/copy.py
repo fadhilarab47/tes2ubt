@@ -8,8 +8,8 @@ from gc import get_objects
 from time import time
 
 from kynaylibs.nan.utils import get_arg, progress
-from pyrogram import *
-from pyrogram.types import *
+from kymang import *
+from kymang.types import *
 
 from naya import app, bots, cmd
 

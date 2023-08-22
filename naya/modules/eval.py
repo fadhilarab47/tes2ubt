@@ -9,8 +9,8 @@ from io import BytesIO, StringIO
 from subprocess import PIPE, Popen, TimeoutExpired
 from time import perf_counter
 
-from pyrogram import *
-from pyrogram.types import *
+from kymang import *
+from kymang.types import *
 
 from . import *
 

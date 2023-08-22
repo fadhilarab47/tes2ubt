@@ -4,7 +4,7 @@
 
 import os
 
-from pyrogram import filters
+from kymang import filters
 
 from . import *
 

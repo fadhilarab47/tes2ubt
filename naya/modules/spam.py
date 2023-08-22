@@ -8,8 +8,8 @@
 
 import asyncio
 
-from pyrogram import Client, enums, filters
-from pyrogram.types import Message
+from kymang import Client, enums, filters
+from kymang.types import Message
 
 from . import *
 

@@ -2,9 +2,9 @@
 # @KynanSupport
 
 
-from pyrogram import *
-from pyrogram.enums import *
-from pyrogram.types import *
+from kymang import *
+from kymang.enums import *
+from kymang.types import *
 
 from . import *
 

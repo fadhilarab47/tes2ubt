@@ -2,7 +2,7 @@
 # @Rizzvbss | @Kenapanan | @SharingUserbot | Zaid-Userbot
 # @KynanSupport
 
-from pyrogram.enums import MessagesFilter
+from kymang.enums import MessagesFilter
 
 from . import *
 

@@ -3,8 +3,8 @@
 
 import asyncio
 
-from pyrogram import Client, filters
-from pyrogram.types import Message
+from kymang import Client, filters
+from kymang.types import Message
 
 from . import *
 

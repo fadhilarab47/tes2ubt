@@ -4,9 +4,9 @@
 
 import asyncio
 
-from pyrogram import Client, filters
-from pyrogram.errors import ChatAdminRequired
-from pyrogram.types import ChatPermissions, ChatPrivileges, Message
+from kymang import Client, filters
+from kymang.errors import ChatAdminRequired
+from kymang.types import ChatPermissions, ChatPrivileges, Message
 
 from . import *
 

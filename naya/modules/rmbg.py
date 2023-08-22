@@ -4,8 +4,8 @@
 
 import os
 
-from pyrogram import filters
-from pyrogram.types import *
+from kymang import filters
+from kymang.types import *
 from removebg import RemoveBg
 
 from . import *

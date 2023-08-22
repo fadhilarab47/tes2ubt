@@ -2,8 +2,8 @@
 # © @KynanSupport
 
 
-from pyrogram import *
-from pyrogram.types import *
+from kymang import *
+from kymang.types import *
 
 from . import *
 

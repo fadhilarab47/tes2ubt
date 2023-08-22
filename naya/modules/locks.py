@@ -2,10 +2,10 @@
 # © @KynanSupport
 
 
-from pyrogram import Client, filters
-from pyrogram.errors.exceptions.bad_request_400 import (ChatAdminRequired,
+from kymang import Client, filters
+from kymang.errors.exceptions.bad_request_400 import (ChatAdminRequired,
                                                         ChatNotModified)
-from pyrogram.types import ChatPermissions, Message
+from kymang.types import ChatPermissions, Message
 
 from . import *
 

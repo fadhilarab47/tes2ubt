@@ -4,7 +4,7 @@
 
 from asyncio import sleep
 
-from pyrogram.raw.functions.messages import DeleteHistory, StartBot
+from kymang.raw.functions.messages import DeleteHistory, StartBot
 
 from . import *
 

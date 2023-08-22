@@ -13,8 +13,8 @@ import heroku3
 import requests
 import urllib3
 from dotenv import load_dotenv
-from pyrogram import *
-from pyrogram.types import *
+from kymang import *
+from kymang.types import *
 
 from naya.config import *
 

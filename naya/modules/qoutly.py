@@ -6,8 +6,8 @@ from io import BytesIO
 
 from kynaylibs.nan.utils import *
 from kynaylibs.nan.utils.http import *
-from pyrogram import Client, filters
-from pyrogram.types import Message
+from kymang import Client, filters
+from kymang.types import Message
 
 from naya import *
 
@@ -172,7 +172,7 @@ async def get_text_or_caption(message: Message):
         return ""
 
 
-async def pyrogram_to_quotly(messages):
+async def kymang_to_quotly(messages):
     if not isinstance(messages, list):
         messages = [messages]
     payload = {
@@ -269,7 +269,7 @@ async def msg_quotly_cmd(client: Client, message):
             except Exception as e:
                 return await eor(message, f"<code>Error : {e}</code>")
             try:
-                make_quotly = await pyrogram_to_quotly(messages)
+                make_quotly = await kymang_to_quotly(messages)
                 bio_sticker = BytesIO(make_quotly)
                 bio_sticker.name = "biosticker.webp"
                 return await message.reply_sticker(bio_sticker)
@@ -283,7 +283,7 @@ async def msg_quotly_cmd(client: Client, message):
     except Exception as e:
         return await eor(message, f"<code>Error : {e}</code>")
     try:
-        make_quotly = await pyrogram_to_quotly(messages)
+        make_quotly = await kymang_to_quotly(messages)
         bio_sticker = BytesIO(make_quotly)
         bio_sticker.name = "biosticker.webp"
         return await message.reply_sticker(bio_sticker)

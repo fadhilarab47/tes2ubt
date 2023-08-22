@@ -6,7 +6,7 @@ import os
 
 import gtts
 from gpytranslate import Translator
-from pyrogram import filters
+from kymang import filters
 
 from . import *
 

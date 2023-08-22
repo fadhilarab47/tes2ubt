@@ -11,8 +11,8 @@ from aiohttp import ClientSession
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from kymang import DEVS
 from kynaylibs.nan import Ubot
-from pyrogram import Client, __version__, enums, filters
-from pyrogram.handlers import MessageHandler
+from kymang import Client, __version__, enums, filters
+from kymang.handlers import MessageHandler
 from pyromod import listen
 from pytgcalls import GroupCallFactory
 from telegraph import Telegraph, exceptions, upload_file
@@ -44,10 +44,10 @@ logging.basicConfig(
 )
 logging.getLogger("asyncio").setLevel(logging.CRITICAL)
 logging.getLogger("pytgcalls").setLevel(logging.WARNING)
-logging.getLogger("pyrogram").setLevel(logging.WARNING)
-logging.getLogger("pyrogram.client").setLevel(logging.WARNING)
-logging.getLogger("pyrogram.session.auth").setLevel(logging.CRITICAL)
-logging.getLogger("pyrogram.session.session").setLevel(logging.CRITICAL)
+logging.getLogger("kymang").setLevel(logging.WARNING)
+logging.getLogger("kymang.client").setLevel(logging.WARNING)
+logging.getLogger("kymang.session.auth").setLevel(logging.CRITICAL)
+logging.getLogger("kymang.session.session").setLevel(logging.CRITICAL)
 logging.basicConfig(level=logging.INFO)
 
 LOGS = logging.getLogger(__name__)

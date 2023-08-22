@@ -7,8 +7,8 @@ import asyncio
 import os
 
 import cv2
-from pyrogram import *
-from pyrogram.types import *
+from kymang import *
+from kymang.types import *
 
 from . import *
 

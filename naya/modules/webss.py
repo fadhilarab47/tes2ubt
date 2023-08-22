@@ -7,7 +7,7 @@ from base64 import b64decode
 from io import BytesIO
 
 from kynaylibs.nan.utils.http import *
-from pyrogram import filters
+from kymang import filters
 
 from . import *
 

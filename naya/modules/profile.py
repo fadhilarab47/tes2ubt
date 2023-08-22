@@ -5,8 +5,8 @@ import os
 from asyncio import sleep
 
 from kynaylibs.nan.utils import eor
-from pyrogram import Client
-from pyrogram.types import Message
+from kymang import Client
+from kymang.types import Message
 
 from naya import *
 

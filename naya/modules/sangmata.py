@@ -4,9 +4,9 @@
 
 import asyncio
 
-from pyrogram import filters
-from pyrogram.errors import YouBlockedUser
-from pyrogram.raw.functions.messages import DeleteHistory
+from kymang import filters
+from kymang.errors import YouBlockedUser
+from kymang.raw.functions.messages import DeleteHistory
 
 from . import *
 

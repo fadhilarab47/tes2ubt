@@ -4,7 +4,7 @@
 
 import asyncio
 
-from pyrogram import enums, filters
+from kymang import enums, filters
 
 from . import *
 

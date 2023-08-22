@@ -9,7 +9,7 @@
 
 import random
 
-from pyrogram.types import InputMediaPhoto
+from kymang.types import InputMediaPhoto
 
 from . import *
 

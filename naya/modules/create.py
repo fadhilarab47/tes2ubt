@@ -1,8 +1,8 @@
 # @Rizzvbss | @Kenapanan | @SharingUserbot | Zaid-Userbot
 # @KynanSupport
 
-from pyrogram import Client
-from pyrogram.types import Message
+from kymang import Client
+from kymang.types import Message
 
 from . import *
 

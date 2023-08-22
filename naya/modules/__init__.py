@@ -7,8 +7,8 @@ from kynaylibs.nan import *
 from kynaylibs.nan.utils import *
 from kynaylibs.nan.utils.db import *
 from kynaylibs.nan.utils.db.permit import *
-from pyrogram import *
-from pyrogram.types import *
+from kymang import *
+from kymang.types import *
 from requests import get
 
 from naya import *

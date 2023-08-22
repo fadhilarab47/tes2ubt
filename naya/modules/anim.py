@@ -6,11 +6,11 @@ import asyncio
 import random
 
 import requests
-from pyrogram import *
-from pyrogram import Client, filters
-from pyrogram.errors.exceptions.flood_420 import FloodWait
-from pyrogram.types import *
-from pyrogram.types import Message
+from kymang import *
+from kymang import Client, filters
+from kymang.errors.exceptions.flood_420 import FloodWait
+from kymang.types import *
+from kymang.types import Message
 
 from . import *
 

@@ -2,8 +2,8 @@
 # © @KynanSupport
 
 
-from pyrogram import filters
-from pyrogram.types import Message
+from kymang import filters
+from kymang.types import Message
 
 from . import *
 

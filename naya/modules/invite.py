@@ -3,8 +3,8 @@
 
 import asyncio
 
-from pyrogram import filters
-from pyrogram.enums import UserStatus
+from kymang import filters
+from kymang.enums import UserStatus
 
 from . import *
 

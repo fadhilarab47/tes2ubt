@@ -4,9 +4,9 @@
 
 import asyncio
 
-from pyrogram import *
-from pyrogram.enums import ChatType
-from pyrogram.types import *
+from kymang import *
+from kymang.enums import ChatType
+from kymang.types import *
 
 from . import *
 

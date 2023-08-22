@@ -8,8 +8,8 @@ from kynaylibs import *
 from kynaylibs.nan.utils.basic import *
 from kynaylibs.nan.utils.misc import *
 from kynaylibs.nan.utils.tools import *
-from pyrogram import filters
-from pyrogram.enums import ChatType
+from kymang import filters
+from kymang.enums import ChatType
 
 from naya import *
 

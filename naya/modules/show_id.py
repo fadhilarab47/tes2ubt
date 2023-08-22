@@ -2,8 +2,8 @@
 # © @KynanSupport
 
 
-from pyrogram import filters
-from pyrogram.enums import ChatType
+from kymang import filters
+from kymang.enums import ChatType
 
 from . import *
 

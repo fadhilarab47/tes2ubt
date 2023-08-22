@@ -4,7 +4,7 @@
 import asyncio
 from io import BytesIO
 
-from pyrogram import filters
+from kymang import filters
 
 from . import *
 

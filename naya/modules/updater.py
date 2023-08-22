@@ -26,8 +26,8 @@ from git import Repo
 from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
 from kynaylibs import *
 from kynaylibs.nan.utils.basic import *
-from pyrogram import Client, filters
-from pyrogram.types import Message
+from kymang import Client, filters
+from kymang.types import Message
 
 from naya import *
 from naya.config import *

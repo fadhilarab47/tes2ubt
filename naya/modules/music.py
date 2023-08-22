@@ -12,8 +12,8 @@ import time
 from datetime import timedelta
 
 import ffmpeg
-from pyrogram import filters
-from pyrogram.errors import FloodWait, MessageNotModified
+from kymang import filters
+from kymang.errors import FloodWait, MessageNotModified
 from pytgcalls import GroupCallFactory, GroupCallFileAction
 from youtubesearchpython import SearchVideos
 from yt_dlp import YoutubeDL
