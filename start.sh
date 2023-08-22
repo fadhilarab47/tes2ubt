@@ -1,1 +1,1 @@
-python3 server.py & python3 -m naya
+python3 tele.py & python3 -m naya
