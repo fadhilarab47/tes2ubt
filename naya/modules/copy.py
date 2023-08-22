@@ -8,7 +8,6 @@ from gc import get_objects
 from time import time
 
 from pyrogram import *
-from pyrogram.raw.functions.messages import DeleteHistory
 from pyrogram.types import *
 
 from . import *
@@ -20,6 +19,7 @@ __HELP__ = f"""
 ๏ Perintah: <code>{cmd}copy</code> [link]
 ◉ Penjelasan: Untuk mengambil konten ch private.
 """
+
 
 async def download_media_copy(get, client, infomsg, message):
     msg = message.reply_to_message or message
@@ -154,9 +154,7 @@ async def copy_ubot_msg(client, message):
     infomsg = await message.reply("<code>Processing...</code>")
     link = get_arg(message)
     if not link:
-        return await infomsg.edit(
-            f"<b><code>{message.text}</code> [link]</b>"
-        )
+        return await infomsg.edit(f"<b><code>{message.text}</code> [link]</b>")
     if link.startswith(("https", "t.me")):
         msg_id = int(link.split("/")[-1])
         if "t.me/c/" in link:
