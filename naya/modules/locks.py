@@ -4,7 +4,7 @@
 
 from kymang import Client, filters
 from kymang.errors.exceptions.bad_request_400 import (ChatAdminRequired,
-                                                        ChatNotModified)
+                                                      ChatNotModified)
 from kymang.types import ChatPermissions, Message
 
 from . import *

@@ -1,5 +1,7 @@
 from platform import python_version as py
 
+from kymang import __version__ as pyro
+from kymang import idle
 from kynaylibs import *
 from kynaylibs.nan import *
 from kynaylibs.nan.load import *
@@ -7,8 +9,6 @@ from kynaylibs.nan.utils import *
 from kynaylibs.nan.utils.db import *
 from kynaylibs.version import __version__ as nay
 from kynaylibs.version import kynay_version as nan
-from kymang import __version__ as pyro
-from kymang import idle
 from uvloop import install
 
 from naya import *

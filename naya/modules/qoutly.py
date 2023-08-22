@@ -4,10 +4,10 @@
 
 from io import BytesIO
 
-from kynaylibs.nan.utils import *
-from kynaylibs.nan.utils.http import *
 from kymang import Client, filters
 from kymang.types import Message
+from kynaylibs.nan.utils import *
+from kynaylibs.nan.utils.http import *
 
 from naya import *
 

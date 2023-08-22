@@ -2,13 +2,13 @@ import asyncio
 from glob import glob
 from os.path import basename, dirname, isfile
 
+from kymang import *
 from kymang import DEVS
+from kymang.types import *
 from kynaylibs.nan import *
 from kynaylibs.nan.utils import *
 from kynaylibs.nan.utils.db import *
 from kynaylibs.nan.utils.db.permit import *
-from kymang import *
-from kymang.types import *
 from requests import get
 
 from naya import *

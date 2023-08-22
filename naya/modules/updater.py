@@ -24,10 +24,10 @@ from sys import executable
 
 from git import Repo
 from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
-from kynaylibs import *
-from kynaylibs.nan.utils.basic import *
 from kymang import Client, filters
 from kymang.types import Message
+from kynaylibs import *
+from kynaylibs.nan.utils.basic import *
 
 from naya import *
 from naya.config import *
