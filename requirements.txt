@@ -5,7 +5,7 @@ pytz
 yt-dlp
 youtube-search-python
 motor
-dnspython
+dnspython==2.3.0
 GitPython
 pykeyboard
 bs4

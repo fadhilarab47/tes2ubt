@@ -26,7 +26,6 @@ scheduler = AsyncIOScheduler()
 CMD_HELP = {}
 START_TIME = datetime.now()
 telegraph = Telegraph()
-telegraph.create_account(short_name="Naya-Pyro")
 
 aiosession = ClientSession()
 
