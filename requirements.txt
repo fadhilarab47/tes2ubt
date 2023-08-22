@@ -36,3 +36,5 @@ gunicorn
 python-dotenv
 uvloop
 httpx
+flask
+flask_restful
