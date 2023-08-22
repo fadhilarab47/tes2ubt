@@ -2,8 +2,8 @@ import asyncio
 from glob import glob
 from os.path import basename, dirname, isfile
 
-from kymang.kymang.database import db
-from kynaylibs import DEVS
+
+from kymang import DEVS
 from kynaylibs.nan import *
 from kynaylibs.nan.utils import *
 from kynaylibs.nan.utils.db import *

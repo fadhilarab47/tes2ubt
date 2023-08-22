@@ -1,5 +1,5 @@
 git+https://github.com/naya1503/pyrogram
-kymang==2.0.2
+kymang
 tgcrypto
 pytz
 yt-dlp
