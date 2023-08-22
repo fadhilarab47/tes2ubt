@@ -3,12 +3,12 @@ tgcrypto
 pytz
 yt-dlp
 youtube-search-python
-motor
+motor==3.0.0
 dnspython==2.3.0
 GitPython
 pykeyboard
 bs4
-Pillow
+Pillow==8.3.2
 pymediainfo
 requests
 unidecode
