@@ -7,7 +7,7 @@ from io import *
 import openai
 from kymang import filters
 from kymang.types import *
-from kynaylibs.nan.utils.http import *
+from naya.utils.http import *
 
 from naya import *
 from naya.config import *
