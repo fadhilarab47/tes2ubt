@@ -6,7 +6,7 @@ from asyncio import sleep
 
 from kymang import Client
 from kymang.types import Message
-from kynaylibs.nan.utils import eor
+from naya.utils import eor
 
 from naya import *
 
