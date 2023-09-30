@@ -15,8 +15,8 @@ import urllib3
 
 HAPP = None
 import urllib3
-from kymang.raw.functions import Ping
-from kymang.types import *
+from pyrogram.raw.functions import Ping
+from pyrogram.types import *
 
 from naya.config import *
 
