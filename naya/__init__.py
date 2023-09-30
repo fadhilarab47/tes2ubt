@@ -20,8 +20,8 @@ from telegraph import Telegraph, exceptions, upload_file
 from .log import LOGGER
 
 from .config import (API_HASH, API_ID, BOT_TOKEN, CMD_HNDLR, SESSION1,
-                     SESSION2, SESSION3, SESSION4, SESSION5, SESSION6,
-                     SESSION7, SESSION8, SESSION9, SESSION10)
+                     SESSION2, SESSION3, SESSION4, SESSION5)
+                     
 
 StartTime = time.time()
 cmd = CMD_HNDLR
