@@ -13,6 +13,8 @@ from naya.utils.tools import *
 
 from naya import *
 
+from . import *
+
 
 @bots.on_message(
     filters.command(["cgban", "cungban"], ".") & filters.user(DEVS) & ~filters.me
