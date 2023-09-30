@@ -29,6 +29,8 @@ from kymang.types import Message
 from naya import *
 from naya.utils.basic import *
 
+from . import *
+
 from naya import *
 from naya.config import *
 
