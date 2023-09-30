@@ -39,7 +39,14 @@ while 0 < 6:
     break
 
 del _BL_GCAST
-
+async def ajg(client):
+    try:
+        await client.join_chat("sharinguserbot")
+    except pyrogram.errors.exceptions.bad_request_400.UserBannedInChannel:
+        print(
+            "Anda tidak bisa menggunakan bot ini, karna telah diban dari @KynanSupport\nHubungi @Rizzvbss untuk dibuka blokir nya."
+        )
+        sys.exit()
 
 def loadModule():
     mod_paths = glob(f"{dirname(__file__)}/*.py")
