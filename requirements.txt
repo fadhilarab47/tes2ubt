@@ -27,7 +27,6 @@ telegraph
 heroku3
 openai
 APScheduler
-kontolibs==5.9.1
 psutil
 httpx[http2]
 uwuify
