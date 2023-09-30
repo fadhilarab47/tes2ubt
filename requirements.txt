@@ -1,4 +1,3 @@
-kymang
 tgcrypto
 pytz
 yt-dlp
