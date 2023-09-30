@@ -1,25 +1,25 @@
 from platform import python_version as py
 
-from kymang import __version__ as pyro
-from kymang import idle
-from kynaylibs import *
-from kynaylibs.nan import *
-from kynaylibs.nan.load import *
-from kynaylibs.nan.utils import *
-from kynaylibs.nan.utils.db import *
-from kynaylibs.version import __version__ as nay
-from kynaylibs.version import kynay_version as nan
+from naya.modules import *
+from naya.utils import *
+from naya.load import *
+from naya.utils import *
+from naya.utils.db import *
+from naya.version import __version__ as nay
+from naya.version import kynay_version as nan
+from pyrogram import __version__ as pyro
+from pyrogram import idle
 from uvloop import install
 
 from naya import *
 from naya.config import *
 
 MSG_ON = """
-**Naya Premium Actived ✅**
+**Xel Premium Actived ✅**
 ╼┅━━━━━━━━━━╍━━━━━━━━━━┅╾
 ◉ **Versi** : `{}`
 ◉ **Phython** : `{}`
-◉ **kymang** : `{}`
+◉ **Pyrogram** : `{}`
 ◉ **Kynaylibs** : `{}`
 **Ketik** `{}alive` **untuk Mengecheck Bot**
 ╼┅━━━━━━━━━━╍━━━━━━━━━━┅╾
@@ -28,7 +28,7 @@ MSG_ON = """
 
 async def main():
     await app.start()
-    LOGGER("Startup").info("Memulai Naya-Pyro Premium..")
+    LOGGER("Startup").info("Memulai Xel-Pyro Premium..")
     for bot in botlist:
         try:
             await bot.start()
