@@ -163,8 +163,8 @@ async def _(client, callback_query):
             ),
             disable_web_page_preview=True,
         )
-    back_text = f"<b>Help Plugins
-                   <b>prefixes: <code>{cmd}</code>
+    back_text = f"<b>Help Plugins</b>\
+                   <b>prefixes: <code>{cmd}</code>\
                    <b>Commands: {len(CMD_HELP)}"
     if back_match:
         await callback_query.edit_message_text(
