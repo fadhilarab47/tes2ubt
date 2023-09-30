@@ -6,10 +6,10 @@ import asyncio
 
 from kymang import filters
 from kymang.enums import ChatType
-from kynaylibs import *
-from kynaylibs.nan.utils.basic import *
-from kynaylibs.nan.utils.misc import *
-from kynaylibs.nan.utils.tools import *
+from naya import *
+from naya.utils.basic import *
+from naya.utils.misc import *
+from naya.utils.tools import *
 
 from naya import *
 
