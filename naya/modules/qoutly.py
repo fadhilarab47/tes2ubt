@@ -6,8 +6,8 @@ from io import BytesIO
 
 from kymang import Client, filters
 from kymang.types import Message
-from kynaylibs.nan.utils import *
-from kynaylibs.nan.utils.http import *
+from naya.utils import *
+from naya.utils.http import *
 
 from naya import *
 
