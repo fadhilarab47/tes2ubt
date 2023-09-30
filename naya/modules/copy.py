@@ -9,7 +9,7 @@ from time import time
 
 from kymang import *
 from kymang.types import *
-from kynaylibs.nan.utils import get_arg, progress
+from naya.utils import get_arg, progress
 
 from naya import app, bots, cmd
 
