@@ -3,12 +3,11 @@ from glob import glob
 from os.path import basename, dirname, isfile
 
 from kymang import *
-from kymang import DEVS
 from kymang.types import *
-from kynaylibs.nan import *
-from kynaylibs.nan.utils import *
-from kynaylibs.nan.utils.db import *
-from kynaylibs.nan.utils.db.permit import *
+from naya.import *
+from naya.utils import *
+from naya.utils.db import *
+from naya.utils.db.permit import *
 from requests import get
 
 from naya import *
