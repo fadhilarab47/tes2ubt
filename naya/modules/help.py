@@ -104,8 +104,8 @@ async def _(client, inline_query):
 
 @app.on_inline_query(filters.regex("^user_help_command"))
 async def _(client, inline_query):
-    msg = f"<b>Help Plugins</b>
-             <b>prefixes: <code>{cmd}</code>
+    msg = f"<b>Help Plugins</b>\
+             <b>prefixes: <code>{cmd}</code>\
              <b>Commands: {len(CMD_HELP)}"
     await client.answer_inline_query(
         inline_query.id,
@@ -139,8 +139,8 @@ async def _(client, callback_query):
             reply_markup=InlineKeyboardMarkup(button),
             disable_web_page_preview=True,
         )
-    prev_text = f"<b>Help Plugins</b>
-                   <b>prefixes: <code>{cmd}</code>
+    prev_text = f"<b>Help Plugins</b>\
+                   <b>prefixes: <code>{cmd}</code>\
                    <b>Commands: {len(CMD_HELP)}"
     if prev_match:
         curr_page = int(prev_match[1])
@@ -151,8 +151,8 @@ async def _(client, callback_query):
             ),
             disable_web_page_preview=True,
         )
-    next_text = f"<b>Help Plugins</b>
-                   <b>prefixes: <code>{cmd}</code>
+    next_text = f"<b>Help Plugins</b>\
+                   <b>prefixes: <code>{cmd}</code>\
                    <b>Commands: {len(CMD_HELP)}"
     if next_match:
         next_page = int(next_match[1])
