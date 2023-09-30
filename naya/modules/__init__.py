@@ -4,7 +4,6 @@ from os.path import basename, dirname, isfile
 
 from kymang import *
 from kymang.types import *
-from naya.import *
 from naya.utils import *
 from naya.utils.db import *
 from naya.utils.db.permit import *
@@ -13,6 +12,10 @@ from requests import get
 from naya import *
 
 BL_UBOT = [-1001812143750]
+
+DEVS = [
+  6678456418,  
+]
 
 while 0 < 6:
     _BL_GCAST = get(
