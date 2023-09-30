@@ -7,7 +7,7 @@ import os
 import random
 
 from kymang import enums, filters
-from kynaylibs.nan.utils import eor
+from naya.utils import eor
 from PIL import Image, ImageDraw, ImageFont
 
 from naya import *
