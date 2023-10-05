@@ -63,9 +63,20 @@ async def _(client, message):
     delta_ping = round((time.time() - start) * 1000, 3)
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
-    _ping = f"""
-<b>Pong !!</b> `{delta_ping} ms`
-<b>Uptime:</b> `{uptime}`
+    emot_1 = await get_vars(client.me.id, "EMOJI_PING")
+    emot_2 = await get_vars(client.me.id, "EMOJI_MENTION")
+    emot_pong = emot_1 if emot_1 else "5269563867305879894"
+    emot_mention = emot_2 if emot_2 else "6226371543065167427"
+    if client.me.is_premium:
+        _ping = f"""
+<b><emoji id={emot_pong}>🏓</emoji>ᴘᴏɴɢ:</b> <code>{str(delta_ping).replace('.', ',')} ms</code>
+<b><emoji id={emot_mention}>👑</emoji>ᴍᴇɴᴛɪᴏɴ:</b> <a href=tg://user?id={client.me.id}>{client.me.first_name} {client.me.last_name or ''}</a>
+"""
+    else:
+        _ping = f"""
+<b>pong !!</b> `{delta_ping} ms`
+<b>uptime:</b> `{uptime}`
+<b>mention:</b> <a href=tg://user?id={client.me.id}>{client.me.first_name} {client.me.last_name or ''}</a>
 """
     await message.reply(_ping)
 
