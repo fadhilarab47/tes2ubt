@@ -4,6 +4,8 @@ from platform import python_version
 from kymang import __version__
 from kymang.types import InlineKeyboardButton, InlineKeyboardMarkup
 from naya import *
+from pyrogram import *
+from pyrogram.types import *
 from naya.config import *
 from naya.modules import loadModule
 
